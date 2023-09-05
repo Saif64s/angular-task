@@ -10,7 +10,7 @@
         </ul>
     </div>
 </div>
-<div *ngIf="isEditClicked; else visible">
+<div *ngIf="editingIndex >= 0">
     <app-name-edit [nameToEdit]="listOfNames[editingIndex]" (saveChanges)="saveEditedName($event)"></app-name-edit>
 </div>
 

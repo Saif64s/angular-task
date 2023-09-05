@@ -9,7 +9,7 @@ import { NameService } from '../service/name.service';
 export class NameListComponent {
   listOfNames: string[];
   editingIndex: number = -1;
-  isEditClicked = false;
+  // isEditClicked = false;
 
   constructor(private nameService: NameService) {
     this.listOfNames = this.nameService.$name;
@@ -17,7 +17,7 @@ export class NameListComponent {
 
   onEditName(idx: number) {
     this.editingIndex = idx;
-    this.isEditClicked = true;
+    // this.isEditClicked = true;
     console.log('pressed edit: ' + idx);
   }
 
