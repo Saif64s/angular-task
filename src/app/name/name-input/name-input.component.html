@@ -1,0 +1,14 @@
+<div class="container-fluid d-flex justify-content-center pt-5">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="name" class="col-form-label">Name -></label>
+        </div>
+        <div class="col-auto">
+            <input type="name" id="name" class="form-control" aria-describedby="nameHelpInline" placeholder="Enter Name"
+                [(ngModel)]="nameAdd">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-dark" type="submit" (click)="onAddName()">Add</button>
+        </div>
+    </div>
+</div>

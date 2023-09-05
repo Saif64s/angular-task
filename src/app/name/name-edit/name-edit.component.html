@@ -1,0 +1,18 @@
+<div class="container-fluid d-flex justify-content-center pt-5" *ngIf="!isNameSaved; else visible">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="name" class="col-form-label">Name -></label>
+        </div>
+        <div class="col-auto">
+            <input type="name" id="name" class="form-control" aria-describedby="nameHelpInline"
+                placeholder="Update Name" [(ngModel)]="editedName">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-dark" type="submit" (click)="saveName()">Update</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #visible>
+    <div class="container-fluid"></div>
+</ng-template>

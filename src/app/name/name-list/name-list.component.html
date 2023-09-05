@@ -1,0 +1,19 @@
+<div class="row d-flex justify-content-center p-5 mx-5" *ngIf="listOfNames.length > 0; else visible">
+    <div class="col-4">
+        <ul class="list-group">
+            <li class="list-group-item text-bg-dark rounded-3 my-1" *ngFor="let name of listOfNames; let i = index">
+                {{name}}
+                <button class="btn btn-danger float-end mx-1" (click)="onDeleteName(i)">Delete</button>
+                <button class="btn btn-info float-end mx-1" (click)="onEditName(i)">Edit</button>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div *ngIf="isEditClicked; else visible">
+    <app-name-edit [nameToEdit]="listOfNames[editingIndex]" (saveChanges)="saveEditedName($event)"></app-name-edit>
+</div>
+
+<ng-template #visible>
+    <div class="container-fluid"></div>
+</ng-template>
